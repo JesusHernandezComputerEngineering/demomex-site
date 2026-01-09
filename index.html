@@ -3,45 +3,11 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- SEO Title -->
-  <title>DEMOMEX Demolition & Hauling | Bay Area Demolition Contractors</title>
-
+  <title>DEMOMEX Demolition and Hauling | Bay Area Demolition Contractor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- SEO Description -->
-  <meta name="description" content="DEMOMEX Demolition & Hauling is a Bay Area demolition contractor with 15+ years of experience. We specialize in residential and commercial demolition, concrete demolition, selective demolition, and debris hauling across the Bay Area.">
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://demomex.com/">
-
-  <!-- Open Graph (social previews) -->
-  <meta property="og:title" content="DEMOMEX Demolition & Hauling | Bay Area Demolition Contractors">
-  <meta property="og:description" content="Professional demolition and debris hauling across the Bay Area. Concrete demolition, selective demolition, and hand excavation with 15+ years of experience.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://demomex.com/">
-  <!-- Optional: add a real image later -->
-  <!-- <meta property="og:image" content="https://demomex.com/og-image.jpg"> -->
-
-  <!-- LocalBusiness Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "DEMOMEX Demolition & Hauling",
-    "url": "https://demomex.com/",
-    "telephone": "+1-925-586-5461",
-    "email": "jesus3065@comcast.net",
-    "areaServed": "Bay Area, California",
-    "description": "DEMOMEX Demolition & Hauling is a Bay Area demolition contractor with 15+ years of experience specializing in residential and commercial demolition, concrete demolition, selective demolition, and debris hauling.",
-    "serviceType": [
-      "Demolition contractor",
-      "Concrete demolition",
-      "Selective demolition",
-      "Debris hauling",
-      "Pier and trench excavation by hand"
-    ]
-  }
-  </script>
+  <!-- SEO -->
+  <meta name="description" content="DEMOMEX Demolition and Hauling is a Bay Area demolition contractor with 15 years of experience. Residential and commercial demolition, concrete demolition, selective demolition, and hand excavation. Call for a free consultation.">
 
   <style>
     :root {
@@ -61,10 +27,15 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: #000;
       color: var(--text);
       line-height: 1.6;
+      padding-bottom: 64px; /* space for mobile call bar */
     }
 
     a {
@@ -83,7 +54,6 @@
     }
 
     /* Header / Nav */
-
     header {
       position: sticky;
       top: 0;
@@ -98,13 +68,15 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.75rem 0;
+      gap: 1rem;
     }
 
     .logo {
       font-weight: 700;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      line-height: 1.15;
     }
 
     nav ul {
@@ -113,6 +85,7 @@
       gap: 1.5rem;
       font-size: 0.9rem;
       text-transform: uppercase;
+      align-items: center;
     }
 
     nav a {
@@ -136,36 +109,60 @@
       width: 100%;
     }
 
-    /* Hero */
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid #333;
+      padding: 0.5rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--text);
+    }
 
+    .nav-cta strong {
+      color: var(--accent);
+      letter-spacing: 0.06em;
+    }
+
+    /* Hero */
     .hero {
-      min-height: 70vh;
+      min-height: 72vh;
       display: flex;
       align-items: center;
       background-image: linear-gradient(
           to bottom,
-          rgba(0,0,0,0.5),
-          rgba(0,0,0,0.9)
+          rgba(0,0,0,0.45),
+          rgba(0,0,0,0.92)
         ),
-        url("hero-image-placeholder.jpg"); /* TODO: replace with your construction site image */
+        url("hero-image-placeholder.jpg");
       background-size: cover;
       background-position: center;
       color: var(--text);
     }
 
     .hero-inner {
-      padding: 4rem 0 3rem;
+      padding: 4rem 0 2rem;
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
     }
 
     .hero h1 {
-      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      font-size: clamp(2.2rem, 4vw, 3.1rem);
       text-transform: uppercase;
       letter-spacing: 0.12em;
       margin-bottom: 1rem;
+      line-height: 1.15;
     }
 
     .hero p {
-      max-width: 550px;
+      max-width: 680px;
       font-size: 1rem;
       color: var(--muted);
       margin-bottom: 1.5rem;
@@ -175,19 +172,20 @@
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+      align-items: center;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.75rem 1.5rem;
+      padding: 0.8rem 1.5rem;
       border-radius: 999px;
       border: 1px solid var(--accent);
       text-transform: uppercase;
       letter-spacing: 0.08em;
       font-size: 0.8rem;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       background: var(--accent);
       color: #000;
@@ -207,10 +205,52 @@
 
     .btn-outline:hover {
       background: rgba(0,0,0,0.6);
+      border-color: var(--accent);
+    }
+
+    .hero-subnote {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #a9a9a9;
+    }
+
+    .hero-subnote strong {
+      color: var(--text);
+    }
+
+    /* Trust bar */
+    .trustbar {
+      border-top: 1px solid #1f1f1f;
+      border-bottom: 1px solid #1f1f1f;
+      background: rgba(0,0,0,0.85);
+    }
+
+    .trustbar-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.75rem;
+      padding: 1rem 0;
+    }
+
+    .trust-pill {
+      border: 1px solid #2b2b2b;
+      border-radius: 999px;
+      padding: 0.6rem 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.15;
+    }
+
+    .trust-pill strong {
+      color: var(--text);
+      margin-right: 0.35rem;
     }
 
     /* Sections */
-
     section {
       padding: 4rem 0;
     }
@@ -237,7 +277,7 @@
     .section-subtitle {
       font-size: 0.95rem;
       color: var(--muted);
-      max-width: 600px;
+      max-width: 720px;
       margin: 0.75rem auto 0;
     }
 
@@ -245,8 +285,35 @@
       background: var(--bg-alt);
     }
 
-    /* About */
+    /* Who we help */
+    .persona-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
 
+    .persona-card {
+      background: #101010;
+      border-radius: 16px;
+      border: 1px solid #252525;
+      padding: 1.25rem;
+      min-height: 100%;
+    }
+
+    .persona-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+
+    .persona-text {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* About */
     .about-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
@@ -274,7 +341,7 @@
     }
 
     .about-highlight {
-      font-weight: 600;
+      font-weight: 700;
       color: var(--text);
     }
 
@@ -303,10 +370,9 @@
     }
 
     /* Services */
-
     .services-intro {
       text-align: center;
-      max-width: 700px;
+      max-width: 760px;
       margin: 0 auto 2.5rem;
       color: var(--muted);
       font-size: 0.95rem;
@@ -338,13 +404,13 @@
       padding: 1.25rem 1.25rem 1.4rem;
       display: flex;
       flex-direction: column;
-      gap: 0.6rem;
+      gap: 0.65rem;
       flex: 1;
     }
 
     .service-title {
       font-size: 1.05rem;
-      font-weight: 600;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
@@ -361,19 +427,24 @@
       color: var(--muted);
     }
 
-    .service-note {
-      font-size: 0.85rem;
-      color: #999;
-      margin-top: 0.4rem;
+    .service-bestfor {
+      font-size: 0.88rem;
+      color: #bdbdbd;
+      border-top: 1px solid #252525;
+      padding-top: 0.75rem;
+      margin-top: 0.25rem;
+    }
+
+    .service-bestfor strong {
+      color: var(--text);
     }
 
     /* Booking / Contact */
-
     .booking-wrapper {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
       gap: 2.5rem;
-      align-items: center;
+      align-items: start;
     }
 
     .booking-box {
@@ -396,7 +467,7 @@
 
     .booking-phone {
       font-size: 1.1rem;
-      font-weight: 600;
+      font-weight: 800;
       margin-bottom: 1.25rem;
       color: var(--accent);
     }
@@ -414,29 +485,15 @@
     }
 
     .contact-list li + li {
-      margin-top: 0.4rem;
+      margin-top: 0.55rem;
     }
 
     .contact-label {
-      font-weight: 600;
+      font-weight: 800;
       color: var(--text);
     }
 
-    /* Local SEO section spacing tweaks */
-    #bay-area-demolition h2 {
-      margin-bottom: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    #bay-area-demolition p {
-      color: var(--muted);
-      max-width: 900px;
-      margin: 0.75rem auto 0;
-      font-size: 0.95rem;
-    }
-
     /* Footer */
-
     footer {
       border-top: 1px solid #222;
       padding: 2rem 0;
@@ -449,12 +506,68 @@
     footer .brand-footer {
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      font-weight: 600;
+      font-weight: 800;
       margin-bottom: 0.4rem;
       color: var(--text);
     }
 
+    /* Mobile sticky call bar */
+    .mobile-callbar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2000;
+      background: rgba(0,0,0,0.92);
+      border-top: 1px solid #222;
+      padding: 0.75rem 1rem;
+      display: none;
+    }
+
+    .mobile-callbar-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .mobile-callbar .mini {
+      font-size: 0.85rem;
+      color: #bdbdbd;
+      line-height: 1.2;
+    }
+
+    .mobile-callbar .mini strong {
+      color: var(--text);
+    }
+
+    .mobile-callbar .callbtn {
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #000;
+      padding: 0.75rem 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+
+    .mobile-callbar .callbtn:hover {
+      background: var(--accent-dark);
+      border-color: var(--accent-dark);
+      text-decoration: none;
+    }
+
     /* Responsive */
+    @media (max-width: 980px) {
+      .persona-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
 
     @media (max-width: 900px) {
       .about-grid,
@@ -466,58 +579,123 @@
 
     @media (max-width: 700px) {
       nav ul {
-        display: none; /* simple mobile: you can add a burger later if you want */
+        display: none;
       }
 
-      .hero-inner {
-        padding-top: 5rem;
-      }
-
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .hero p {
-        font-size: 0.95rem;
+      .trustbar-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       section {
         padding: 3rem 0;
       }
+
+      .mobile-callbar {
+        display: block;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Header / Nav -->
   <header>
     <div class="container nav">
-      <div class="logo">DEMOMEX Demolition & Hauling</div>
+      <div class="logo">DEMOMEX Demolition and Hauling</div>
+
       <nav>
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#about">Welcome</a></li>
+          <li><a href="#who">Who We Help</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#book">Book Online</a></li>
+          <li><a href="#book">Consultation</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
+      <a class="nav-cta" href="tel:+19255865461" aria-label="Call DEMOMEX">
+        <span>Call</span> <strong>(925) 586 5461</strong>
+      </a>
     </div>
   </header>
 
   <!-- Hero -->
   <section id="home" class="hero">
     <div class="container hero-inner">
-      <h1>DEMOMEX Demolition & Hauling<br>Bay Area Demolition Contractors</h1>
+      <div class="hero-kicker">Bay Area Demolition Contractor</div>
+
+      <h1>Demolition and Hauling<br>Residential and Commercial</h1>
+
       <p>
-        DEMOMEX is a Bay Area demolition contractor providing professional demolition and debris hauling for
-        residential and commercial projects. From concrete removal to selective demolition and hand excavation,
-        we deliver safe, reliable service backed by 15+ years of experience.
+        DEMOMEX delivers safe, clean, and efficient demolition for homeowners, contractors, and property managers.
+        From concrete demolition and selective demolition to hand excavation, we help you keep projects moving
+        with clear communication and reliable scheduling.
       </p>
+
       <div class="hero-actions">
-        <a href="#book" class="btn">Request a Free Consultation</a>
-        <a href="#services" class="btn btn-outline">View Services</a>
+        <a href="tel:+19255865461" class="btn">Call Now</a>
+        <a href="#book" class="btn btn-outline">Free Consultation</a>
+      </div>
+
+      <div class="hero-subnote">
+        <strong>15 years experience</strong> • Bay Area service • Jobsite safety and clean finish
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust bar -->
+  <div class="trustbar" role="region" aria-label="Trust indicators">
+    <div class="container">
+      <div class="trustbar-grid">
+        <div class="trust-pill"><strong>15 years</strong>Experience</div>
+        <div class="trust-pill"><strong>Bay Area</strong>Service</div>
+        <div class="trust-pill"><strong>Residential</strong>and Commercial</div>
+        <div class="trust-pill"><strong>Clean</strong>Jobsite Finish</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Who we help -->
+  <section id="who">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Who We Help</div>
+        <h2 class="section-title">Built for Homeowners and Contractors</h2>
+        <p class="section-subtitle">
+          Whether you need a clean demo for a remodel or a dependable crew for a jobsite schedule, DEMOMEX is ready.
+        </p>
+      </div>
+
+      <div class="persona-grid">
+        <div class="persona-card">
+          <div class="persona-title">Homeowners</div>
+          <p class="persona-text">
+            Clear scope, clean work area, and a finished site you can build on. Great for remodels, concrete removal, and cleanouts.
+          </p>
+        </div>
+
+        <div class="persona-card">
+          <div class="persona-title">Contractors</div>
+          <p class="persona-text">
+            Reliable scheduling, safety focused crew, and clean handoff so your next trade can start on time.
+          </p>
+        </div>
+
+        <div class="persona-card">
+          <div class="persona-title">Property Managers</div>
+          <p class="persona-text">
+            Controlled demolition and debris hauling with attention to access, tenant impact, and site cleanup.
+          </p>
+        </div>
+
+        <div class="persona-card">
+          <div class="persona-title">Commercial</div>
+          <p class="persona-text">
+            Scope driven work for stores, offices, and light commercial spaces, including selective demolition and concrete removal.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -528,23 +706,25 @@
       <div class="about-grid">
         <div>
           <div class="about-tag">About Us</div>
-          <h2 class="about-title">15+ Years of Demolition Experience in the Bay Area</h2>
+          <h2 class="about-title">15 Years of Demolition Experience in the Bay Area</h2>
+
           <p class="about-text">
-            DEMOMEX Demolition & Hauling is a go to demolition contractor serving the Bay Area. With over
-            <span class="about-highlight">15 years of hands on experience</span>, we handle demolition and hauling
-            projects ranging from small residential jobs to demanding commercial work.
+            DEMOMEX Demolition and Hauling is your go to demolition contractor in the Bay Area.
+            With over <span class="about-highlight">15 years of hands on experience</span>, we handle a wide range
+            of demolition and hauling projects, from small residential jobs to demanding commercial work.
           </p>
+
           <p class="about-text">
-            Our goal is simple: do the job safely, keep the site clean, communicate clearly, and deliver a result
-            you feel good about. Reach out today to set up a free consultation and talk through your project.
+            Our goal is simple: keep the site safe and clean, communicate clearly, and deliver a result you feel good about.
+            Reach out today to set up a free consultation and talk through your project.
           </p>
-          <a href="#services" class="btn btn-outline">Learn More</a>
+
+          <a href="#book" class="btn btn-outline">Schedule a Consultation</a>
         </div>
 
         <div class="about-image-wrapper">
-          <!-- TODO: replace with your own "About" image -->
           <img src="about-image-placeholder.jpg" alt="DEMOMEX demolition crew on site in the Bay Area">
-          <div class="about-badge">Bay Area • Demolition & Hauling</div>
+          <div class="about-badge">Bay Area • Demolition and Hauling</div>
         </div>
       </div>
     </div>
@@ -555,70 +735,54 @@
     <div class="container">
       <div class="section-header">
         <div class="section-kicker">Our Services</div>
-        <h2 class="section-title">Demolition & Hauling Services</h2>
+        <h2 class="section-title">Scope Driven Work, Clean Results</h2>
         <p class="section-subtitle">
-          We provide a full range of demolition and hauling services across the Bay Area. Whether your project is
-          small or large scale, we guide you through every step so you know what to expect.
+          We provide demolition and hauling services that fit real jobsite needs, from concrete removal to selective demolition and hand excavation.
         </p>
       </div>
 
       <p class="services-intro">
-        From concrete demolition to selective demolition and hand excavation, DEMOMEX is equipped to handle
-        challenging jobs safely and efficiently while keeping your project on schedule and within budget.
+        If you are planning a remodel, preparing a site for new work, or need demolition completed on a schedule,
+        DEMOMEX brings the experience and equipment to get it done safely and efficiently.
       </p>
 
       <div class="services-grid">
         <!-- Service 1 -->
         <article class="service-card">
-          <div class="service-image"
-               style="background-image: url('concrete-service-placeholder.jpg');">
-          </div>
+          <div class="service-image" style="background-image: url('concrete-service-placeholder.jpg');"></div>
           <div class="service-body">
             <div class="service-label">Service</div>
-            <h3 class="service-title">Concrete Demolition & Hauling</h3>
+            <h3 class="service-title">Concrete Demolition and Hauling</h3>
             <p class="service-text">
-              We break up and haul away driveways, slabs, walkways, and other concrete structures. Our crew brings
-              the equipment and experience needed to keep the work area safe and clear.
+              We break up and haul away driveways, slabs, walkways, and other concrete structures for residential and commercial properties.
             </p>
-            <p class="service-note">
-              We walk you through each step so you understand how concrete will be removed and hauled away.
-            </p>
+            <div class="service-bestfor"><strong>Best for:</strong> driveways, slabs, walkways, foundations, concrete removal and cleanup.</div>
           </div>
         </article>
 
         <!-- Service 2 -->
         <article class="service-card">
-          <div class="service-image"
-               style="background-image: url('selective-service-placeholder.jpg');">
-          </div>
+          <div class="service-image" style="background-image: url('selective-service-placeholder.jpg');"></div>
           <div class="service-body">
             <div class="service-label">Service</div>
             <h3 class="service-title">Selective Demolition</h3>
             <p class="service-text">
-              We perform selective demolition with care so surrounding areas stay protected. Each project starts
-              with a walk through and a clear scope so there are no surprises.
+              Interior and exterior selective demolition performed with care so surrounding areas stay protected and the scope stays clean.
             </p>
-            <p class="service-note">
-              Ideal for remodels, renovations, and partial tear downs.
-            </p>
+            <div class="service-bestfor"><strong>Best for:</strong> remodels, renovations, interior demo, partial tear downs.</div>
           </div>
         </article>
 
         <!-- Service 3 -->
         <article class="service-card">
-          <div class="service-image"
-               style="background-image: url('pier-trench-service-placeholder.jpg');">
-          </div>
+          <div class="service-image" style="background-image: url('pier-trench-service-placeholder.jpg');"></div>
           <div class="service-body">
             <div class="service-label">Service</div>
             <h3 class="service-title">Pier and Trench Excavation by Hand</h3>
             <p class="service-text">
-              When access is limited or precision matters, we specialize in hand dug piers and trenches. This
-              method helps protect existing utilities and structures while keeping your project moving.
+              When access is limited or precision matters, we provide hand dug piers and trenches to protect existing utilities and structures.
             </p>
-            <p class="service-note">
-              A strong option for tight job sites and detailed work.
-            </p>
+            <div class="service-bestfor"><strong>Best for:</strong> tight access sites, precision trenches, utility sensitive work.</div>
           </div>
         </article>
       </div>
@@ -630,78 +794,53 @@
     <div class="container">
       <div class="booking-wrapper">
         <div class="booking-box">
-          <div class="section-kicker">Book an Appointment</div>
+          <div class="section-kicker">Consultation</div>
           <h3 class="booking-title">Schedule a Free Consultation</h3>
           <p class="booking-text">
-            Ready to talk about your project? Call us to set up a free on site consultation. We will review the
-            scope, access, and timeline so you have a clear plan before work begins.
+            Ready to talk about your project? Call to schedule a free on site consultation.
+            We will review the scope, access, and timeline so you have a clear plan before work begins.
           </p>
+
           <div class="booking-phone">CELL: <a href="tel:+19255865461">(925) 586 5461</a></div>
+
           <a href="tel:+19255865461" class="btn">Call Now</a>
+
           <p class="booking-note">
-            Phone hours may vary depending on jobsite schedule. If we miss your call, please leave a message and
-            we will return it as soon as possible.
+            Phone hours may vary depending on jobsite schedule. If we miss your call, please leave a message and we will return it as soon as possible.
           </p>
         </div>
 
         <div id="contact">
           <div class="section-kicker">Contact</div>
-          <h3 class="booking-title">DEMOMEX Demolition & Hauling</h3>
+          <h3 class="booking-title">DEMOMEX Demolition and Hauling</h3>
           <ul class="contact-list">
-            <li>
-              <span class="contact-label">Service Area:</span>
-              &nbsp;Bay Area, California
-            </li>
-            <li>
-              <span class="contact-label">Phone:</span>
-              &nbsp;<a href="tel:+19255865461">(925) 586 5461</a>
-            </li>
-            <li>
-              <span class="contact-label">Email:</span>
-              &nbsp;<a href="mailto:jesus3065@comcast.net">jesus3065@comcast.net</a>
-            </li>
+            <li><span class="contact-label">Service Area:</span> Bay Area, California</li>
+            <li><span class="contact-label">Phone:</span> <a href="tel:+19255865461">(925) 586 5461</a></li>
+            <li><span class="contact-label">Email:</span> <a href="mailto:jesus3065@comcast.net">jesus3065@comcast.net</a></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Local SEO Block -->
-  <section id="bay-area-demolition">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-kicker">Service Areas</div>
-        <h2 class="section-title">Bay Area Demolition & Debris Hauling</h2>
-        <p class="section-subtitle">
-          If you are searching for demolition hauling in the Bay Area, DEMOMEX is ready to help.
-        </p>
-      </div>
-
-      <p>
-        DEMOMEX provides demolition and hauling services throughout the Bay Area. We work with homeowners,
-        contractors, and businesses to deliver reliable solutions for residential demolition, commercial demolition,
-        concrete demolition, selective demolition, and construction debris hauling.
-      </p>
-
-      <p>
-        We serve clients across the Bay Area, including San Jose, San Francisco, Oakland, Berkeley, Fremont,
-        Hayward, Concord, Walnut Creek, San Mateo, Palo Alto, Mountain View, Sunnyvale, and nearby communities.
-      </p>
-
-      <p>
-        Contact DEMOMEX today to schedule a free consultation and get a clear plan for your demolition and hauling
-        project.
-      </p>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer>
     <div class="container">
-      <div class="brand-footer">DEMOMEX Demolition & Hauling</div>
+      <div class="brand-footer">DEMOMEX Demolition and Hauling</div>
       <div>CELL: (925) 586 5461 • jesus3065@comcast.net</div>
     </div>
   </footer>
+
+  <!-- Mobile sticky call bar -->
+  <div class="mobile-callbar" role="region" aria-label="Call to action">
+    <div class="mobile-callbar-inner">
+      <div class="mini">
+        <strong>Free consultation</strong><br>
+        Bay Area demolition and hauling
+      </div>
+      <a class="callbtn" href="tel:+19255865461">Call (925) 586 5461</a>
+    </div>
+  </div>
 
 </body>
 </html>
